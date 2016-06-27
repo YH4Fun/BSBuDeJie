@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="KGk-i7-Jjw" customClass="SYHSubTagCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="79.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YxZ-wa-FYW">
+                        <rect key="frame" x="15" y="10" width="60" height="60"/>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="Ruy-te-xiA"/>
+                            <constraint firstAttribute="height" constant="60" id="n6F-VX-WhW"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="At3-lR-qCa">
+                        <rect key="frame" x="90" y="10" width="42" height="20.5"/>
+                        <animations/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A2F-ja-cQt">
+                        <rect key="frame" x="90" y="51.5" width="37.5" height="18"/>
+                        <animations/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u8o-Xn-QfZ">
+                        <rect key="frame" x="251" y="24" width="54" height="31"/>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="54" id="XV4-n1-dfw"/>
+                            <constraint firstAttribute="height" constant="31" id="b7x-fi-Mx7"/>
+                        </constraints>
+                        <state key="normal" title="+ 订阅" backgroundImage="tagButtonBG">
+                            <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                    </button>
+                </subviews>
+                <animations/>
+                <constraints>
+                    <constraint firstItem="YxZ-wa-FYW" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="8tB-0b-O8R"/>
+                    <constraint firstAttribute="trailing" secondItem="u8o-Xn-QfZ" secondAttribute="trailing" constant="15" id="GQa-6f-Gfc"/>
+                    <constraint firstItem="A2F-ja-cQt" firstAttribute="leading" secondItem="YxZ-wa-FYW" secondAttribute="trailing" constant="15" id="P78-oA-bBY"/>
+                    <constraint firstItem="At3-lR-qCa" firstAttribute="leading" secondItem="YxZ-wa-FYW" secondAttribute="trailing" constant="15" id="R2G-ez-aXu"/>
+                    <constraint firstItem="u8o-Xn-QfZ" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="TXN-d9-58e"/>
+                    <constraint firstItem="At3-lR-qCa" firstAttribute="top" secondItem="YxZ-wa-FYW" secondAttribute="top" id="a9V-ZD-AoW"/>
+                    <constraint firstItem="YxZ-wa-FYW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="c13-Zf-Ofu"/>
+                    <constraint firstItem="A2F-ja-cQt" firstAttribute="bottom" secondItem="YxZ-wa-FYW" secondAttribute="bottom" id="kJv-k8-Fsq"/>
+                </constraints>
+            </tableViewCellContentView>
+            <animations/>
+            <connections>
+                <outlet property="iconView" destination="YxZ-wa-FYW" id="UIO-Bq-F7R"/>
+                <outlet property="nameLabel" destination="At3-lR-qCa" id="MPe-hp-9HN"/>
+                <outlet property="numberLabel" destination="A2F-ja-cQt" id="CWQ-1E-Spq"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="tagButtonBG" width="80" height="31"/>
+    </resources>
+</document>

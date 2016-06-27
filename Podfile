@@ -1,0 +1,7 @@
+pod 'AFNetworking', '~> 3.0.3'
+pod 'MJExtension', '~> 3.0.7'
+pod 'SDWebImage', '~> 3.7.3'
+pod 'SVProgressHUD', '~> 2.0-beta'
+pod 'MJRefresh', '~> 3.0.7'
+pod 'DACircularProgress', '~> 2.3.1'
+pod 'pop', '~> 1.0.8'

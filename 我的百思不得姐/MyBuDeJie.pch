@@ -1,0 +1,55 @@
+//
+//  MyBuDeJie.pch
+//  我的百思不得姐
+//
+//  Created by 孙英豪 on 15/12/18.
+//  Copyright © 2015年 孙英豪. All rights reserved.
+//
+
+
+#ifdef __OBJC__
+
+// 弱引用
+#define SYHWeakSelf __weak typeof(self) weakSelf = self;
+// 将数据写到桌面
+#define SYHAFNWriteToPlist(fileName) [responseObject writeToFile:[NSString stringWithFormat:@"/Users/SUN/Desktop/%@.plist",fileName] atomically:YES]
+
+
+#define iPhone6 ([UIScreen mainScreen].bounds.size.height == 667)
+#define iPhone6P ([UIScreen mainScreen].bounds.size.height == 736)
+#define iPhone5 ([UIScreen mainScreen].bounds.size.height == 568)
+#define iPhone4 ([UIScreen mainScreen].bounds.size.height == 480)
+
+#define SYHScreenW [UIScreen mainScreen].bounds.size.width
+#define SYHScreenH [UIScreen mainScreen].bounds.size.height
+
+
+#define SYHColor(r,g,b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1]
+#define SYHAlphaColor(r,g,b,a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:a]
+#define SYHRandomColor SYHColor(arc4random_uniform(255),arc4random_uniform(255),arc4random_uniform(255))
+//#define SYHCommonBgColor SYHColor(206,206,206)
+#define SYHCommonBgColor [UIColor colorWithWhite:0.95 alpha:1]
+//#define SYHLittleWhiteColor [UIColor colorWithWhite:0.95 alpha:1]
+
+
+#import "UIImage+SYHImage.h"
+#import "UIView+Frame.h"
+#import "UIBarButtonItem+item.h"
+#import "SYHGlobeConst.h"
+#import "UIImageView+Header.h"
+#import "NSDate+SYHExtension.h"
+
+
+#ifdef DEBUG   //调试阶段
+
+#define SYHLog(...) NSLog(__VA_ARGS__)
+
+#else     //发布阶段
+
+#define SYHLog(...)
+
+#endif
+
+#define SYHFunc SYHLog(@"%s",__func__)
+
+#endif
